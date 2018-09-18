@@ -40,7 +40,7 @@ interface (APIs) for data sources such as of Google earth engine.
 
 1. Laptop 32bit/64 bit
 1. Workshop material is tested on 64 bit computer, it is said to be working in 32 bit, lets experiment!
-1. A copy of Docker container image from [here](https://drive.google.com/file/d/1RbnQAiRJY40xO6ty2TPXxM5-4vqG1cl_), file from the link foss-pt-gsa_v3.tar.gz is 2.5 GB in size, will be using this container for DIY
+1. The docker container link of workshop is updated here soon
 
 **Linux**
 
