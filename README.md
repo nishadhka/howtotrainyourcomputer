@@ -5,19 +5,10 @@ SCCS-Bng 2018, long workshop for beginners
 ![alt text](https://raw.githubusercontent.com/nishadhka/howtotrainyourcomputer/master/flayer_httyc.png)
 
 By all means today's personal computers are most powerful computing tool ever made. 
-This workshop tries to show a set of exercises to train that dragon!. To get 
-assistance from it in scientific work which are computationally and data intensive 
-such as in the field of Conservation sciences. 
-
-The scheme of training exercises proposed is as follows
-
-**"Practice Galileo's annotation with a life boat all along having time travel!"**
-
-Time travel-Version controlling system is computer's time machine.   
-
-Life boat- Operating system virtualization/containerization- Docker
-
-Galileo's annotation- Jupyter notebook
+This workshop tries to show a set of tools and exercises to train that dragon!. Which may 
+enhance its apprenticeship in scientific work, challenging both in terms of computing and 
+data scale, such as in Conservation Sciences. Scientific presentation style used by Galileo Galilei, 
+time travelling with life boats are some of the tools and exercise going to be used for the training.
 
 Python programming language is an easy to read and learn computing language. 
 Its open source nature and wide usage gives rise to strong base of libraries 
