@@ -8,7 +8,8 @@ By all means today's personal computers are most powerful computing tool ever ma
 This workshop tries to show a set of tools and exercises to train that dragon!. Which may 
 enhance its apprenticeship in scientific work, challenging both in terms of computing and 
 data scale, such as in Conservation Sciences. Scientific presentation style used by Galileo Galilei, 
-time travelling with life boats are some of the tools and exercise going to be used for the training.
+time travelling with life boats are some of the tools and exercise going to be used for the training
+while interacting with Python!.
 
 Python programming language is an easy to read and learn computing language. 
 Its open source nature and wide usage gives rise to strong base of libraries 
