@@ -9,7 +9,7 @@ This workshop tries to show a set of tools and exercises to train that dragon!. 
 enhance its apprenticeship in scientific work, challenging both in terms of computing and 
 data scale, such as in Conservation Sciences. Scientific presentation style used by Galileo Galilei, 
 time travelling with life boats are some of the tools and exercise going to be used for the training
-while interacting in Python!.
+while we interact with computer in Python!.
 
 Python programming language is an easy to read and learn computing language. 
 Its open source nature and wide usage gives rise to strong base of libraries 
@@ -32,14 +32,15 @@ interface (APIs) for data sources such as of Google earth engine.
 
 1. Laptop 32bit/64 bit
 1. Workshop material is tested on 64 bit computer, it is said to be working in 32 bit, lets experiment!
-1. The docker container link of workshop is updated here soon
+1. The docker imagery for the workshop is in dockerhub https://hub.docker.com/r/airpollutionstudyindia/foss-pt-gsa/, version5 is latest
+Please update into latest image in the above link just before workshop
 
 **Linux**
 
 1. Install docker, I followed [digital ocean install tutorial ](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04),  which worked!.
 1. Use docker to load downloaded tar into it as an container image, before that unzip the foss-pt-gsa_v3.tar.gz into foss-pt-gsa_v3.tar
 ```   
-docker load -i  foss-pt-gsa_v3.tar 
+docker load -i airpollutionstudyindia/foss-pt-gsa:version5
 ```
 1. To check the docker is loaded with new image, ensure the image ```foss-pt-gsa/foss-pt-gsa:version3``` is listed by entering
 ```
@@ -47,7 +48,7 @@ docker images
 ```
 1. To run the image, enter
 ```
-docker run -dit foss-pt-gsa/foss-pt-gsa:version3
+docker run -dit airpollutionstudyindia/foss-pt-gsa:version5
 ```
 1. Get the CONTAINER_ID of the just started container by the command ```docker ps```
 1. To enter into the image bash
@@ -83,11 +84,11 @@ docker inspect image_ID | grep "IPAddress"
 3. Under the Docker quick start program, after the virtual machine run, check docker is working by entering command ```docker ps```
 4. Now, import the workshop container by
 	```
-	docker load -i foss-pt-gsa_v3.tar
+	docker load -i airpollutionstudyindia/foss-pt-gsa:version5
 	```
 5. Then run the imported container image by 
 	```
-	docker run --name jupyter1 --rm -it --user root -d -p 8080:8080 jupyter/r-notebook:version3
+	docker run --name jupyter1 --rm -it --user root -d -p 8080:8080 airpollutionstudyindia/foss-pt-gsa:version5
 	```
 6. again check the command ```docker ps```, it would show the container is running by having a container ID
 7. To get into the running docker
