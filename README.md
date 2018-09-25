@@ -79,7 +79,7 @@ docker inspect image_ID | grep "IPAddress"
 
 1. Local copy of Docker toolbox from [here](https://docs.docker.com/toolbox/toolbox_install_windows/) for windows 64 bit, for 32 bit Windows, follow this [link](https://medium.com/@chrispatten/installing-and-running-docker-on-32-bit-windows-d18b95ee1fc3).
 1. Local copy boot2docker.iso from [here](https://github.com/boot2docker/boot2docker/releases/download/v18.06.1-ce/boot2docker.iso), it is better to follow old method of docker toolbox instead of docker native software for Windows.
-1. save the iso file in C:\Users$USER.docker\machine\cache\boot2docker.iso, where $USER is your username in the windows
+1. save the iso file in C:\Users\\$USER\\.docker\machine\cache\boot2docker.iso, where $USER is your username in the windows
 2. Open the program Docker quick start, It will make a separate virtual machine to run the docker container
 3. Under the Docker quick start program, after the virtual machine run, check docker is working by entering command ```docker ps```
 4. Now, import the workshop container by
