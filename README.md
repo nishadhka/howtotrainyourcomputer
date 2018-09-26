@@ -40,7 +40,7 @@ Please update into latest image in the above link just before workshop
 1. Install docker, I followed [digital ocean install tutorial ](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04),  which worked!.
 1. Use docker to load downloaded tar into it as an container image, before that unzip the foss-pt-gsa_v3.tar.gz into foss-pt-gsa_v3.tar
 ```   
-docker load -i airpollutionstudyindia/foss-pt-gsa:version5
+docker pull airpollutionstudyindia/foss-pt-gsa:version5
 ```
 1. To check the docker is loaded with new image, ensure the image ```foss-pt-gsa/foss-pt-gsa:version3``` is listed by entering
 ```
@@ -84,7 +84,7 @@ docker inspect image_ID | grep "IPAddress"
 3. Under the Docker quick start program, after the virtual machine run, check docker is working by entering command ```docker ps```
 4. Now, import the workshop container by
 	```
-	docker load -i airpollutionstudyindia/foss-pt-gsa:version5
+	docker pull airpollutionstudyindia/foss-pt-gsa:version5
 	```
 5. Then run the imported container image by 
 	```
