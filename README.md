@@ -38,7 +38,7 @@ Please update into latest image in the above link just before workshop
 **Linux**
 
 1. Install docker, I followed [digital ocean install tutorial ](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04),  which worked!.
-1. Use docker to load downloaded tar into it as an container image, before that unzip the foss-pt-gsa_v3.tar.gz into foss-pt-gsa_v3.tar
+1. Use docker to get the workshop image
 ```   
 docker pull airpollutionstudyindia/foss-pt-gsa:version5
 ```
