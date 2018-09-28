@@ -97,10 +97,9 @@ docker inspect image_ID | grep "IPAddress"
 	```
 1. After enter into the image’s bash terminal, enter following commands. the commands download the workshop github repo zip file into a working direcoty, then unzip it and get into the repo folder to start a jupter notebook server 
 
-        cd /home/ubuntu/  
-        wget https://github.com/nishadhka/FOSS-Python-GeospatialAnalysis/archive/master.zip
-        unzip master.zip
-        cd FOSS-Python-GeospatialAnalysis-master
+        cd /home/work/  
+        git clone https://github.com/nishadhka/howtotrainyourcomputer.git 
+        cd howtotrainyourcomputer
         jupyter notebook --ip=0.0.0.0 --port=8080 --allow-root
       
 1. Note down the link provided by the jupyter notebook such as example http://0.0.0.0:8080/?token=c8e944b8397b0bde97b4d9284e5e3ffc0136658fcca3ea1e
