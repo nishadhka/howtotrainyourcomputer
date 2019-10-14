@@ -1,6 +1,6 @@
 # How to train your computer?
 
-SCCS-Bng 2018, long workshop for beginners
+SCCS-Bng 2019, long workshop for beginners
 
 ![alt text](https://raw.githubusercontent.com/nishadhka/howtotrainyourcomputer/master/flayer_httyc.png)
 
