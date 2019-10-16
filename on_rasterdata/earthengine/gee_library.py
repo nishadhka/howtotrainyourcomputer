@@ -5,9 +5,11 @@ import datetime
 import zipfile
 import ee
 import matplotlib.image as mpimg
-import requests, StringIO
+import requests
 import tifffile as tiff
 import rasterio
+import io
+import io as stringIOModule
 
 
 class ServerError(Exception):
@@ -36,7 +38,7 @@ def unzipURL(img_url, tmp_directory = None):
     # Set up temp directory
     #
     if tmp_directory == None:
-        tmp_directory="./tmp/"+str(random.randrange(99999999))
+        tmp_directory="/home/sunbird/Documents/april_2019/sentinel5p/"+str(random.randrange(99999999))
     zip_filename = os.path.join(tmp_directory, 'zipped_tile.zip')
     # make tmp directory
     if not os.path.exists(tmp_directory):
@@ -54,16 +56,16 @@ def unzipURL(img_url, tmp_directory = None):
         sc = r.status_code
     except requests.ConnectionError as e:
         raise e
-
+    IOfile = io.BytesIO()
     if r.status_code == 200:
-        z = zipfile.ZipFile(StringIO.StringIO(r.content))
+        z = zipfile.ZipFile(io.BytesIO(r.content))
         z.extractall(tmp_directory)
         z.close()
         return tmp_directory
     elif r.status_code == 400:
-        print "Uh-oh. Status code 400 (Bad Request). Possible problems:"
-        print "- You requested a band that wasn't available in every image."
-        print "- Some other unknown issue."
+        print("Uh-oh. Status code 400 (Bad Request). Possible problems:")
+        print("- You requested a band that wasn't available in every image.")
+        print("- Some other unknown issue.")
         raise ServerError("Status code 400")
     elif r.status_code == 429:
         raise ServerError("Status code 429")
@@ -136,8 +138,8 @@ def img_at_region(geCollection, resolution, bands, geo_bounds, verbose=False):
         img_band_dictionary[k] = tiff.imread(v)
 
     src1=rasterio.open(tif_band_dictionary[bands[0]])
-    img_affine=src1.affine
-    return img_band_dictionary,img_affine
+    #img_affine=src1.affine
+    return img_band_dictionary
 
 
 def tif_at_region(geCollection, resolution, bands, geo_bounds, verbose=False):
@@ -181,7 +183,7 @@ def tif_at_region(geCollection, resolution, bands, geo_bounds, verbose=False):
 
     # debug output
     if verbose:
-        print path
+        print(path)
 
     # unzip the tiff
     tif_location = unzipURL(path)
@@ -265,7 +267,7 @@ def date_slices(geImageCollection, bounds_geometry, descending=False):
     date_slices = []
     date_list = list(set(dates_available(geImageCollection)))
     date_list.sort()
-    print len(date_list), "unique dates found."
+    print(len(date_list), "unique dates found.")
     # convert these strings into Date objects
     date_list = [ee.Date(d) for d in date_list]
     start_date = date_list[0]
@@ -284,7 +286,7 @@ def date_slices(geImageCollection, bounds_geometry, descending=False):
             except IndexError:
                 pass
 
-        print i
+        print(i)
 
     return date_slices
 
